@@ -5,9 +5,9 @@ from django.utils.translation import ugettext_lazy as _
 #from polls.views import PollListView, PollDetailView
 
 @apphook_pool.register  # register the application
-class PollsApphook(CMSApp):
-    app_name = "polls"
-    name = _("Polls Application")
+class AppsimagenesApphook(CMSApp):
+    app_name = "appimagenes"
+    name = _("Carrusel Dinamico")
 
     def get_urls(self, page=None, language=None, **kwargs):
-        return ["polls.urls"]
+        return ["appimagenes.urls"]

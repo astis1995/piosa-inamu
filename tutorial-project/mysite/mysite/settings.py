@@ -180,9 +180,10 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
     'mysite',
+    'appimagenes',
     'polls_cms_integration',
     'polls',
-    'appimagenes',
+    'events'
 ]
 
 LANGUAGES = (
@@ -215,6 +216,8 @@ CMS_TEMPLATES = (
     ('sidebar_right.html', 'Sidebar Right'),
     ('carousel.html', 'Carousel'),
     ('perfil.html', 'Perfil'),
+    ('apps_temp.html', 'Apps'),
+    ('carousel_pagina.html', 'Carousel2'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'

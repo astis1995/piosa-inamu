@@ -9,18 +9,19 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.static import serve
-
+from django.urls import path
 admin.autodiscover()
 
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
-        {'sitemaps': {'cmspages': CMSSitemap}}),
-]
+        {'sitemaps': {'cmspages': CMSSitemap}}),]
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', admin.site.urls),  # NOQA
 url(r'^polls/', include('polls.urls')),
+url('', include('appimagenes.urls')),#url('^inicio[0123455+]/', include('appimagenes.urls')),
 #url(r'^appimagenes/', include('appimagenes.urls', namespace='appimagenes')),
+#path('$', include('events.urls')),
     url(r'^', include('cms.urls')),
 )
 

@@ -6,12 +6,12 @@ from polls.models import Poll
 from datetime import date
 
 
-class ImagenesModel(models.Model):
+class ImagenesModel(CMSPlugin):
     nombre = models.CharField(max_length=140)
     cedula = models.CharField(max_length=10)
     foto_de_perfil = models.BooleanField(default=False)
     foto_de_producto =models.BooleanField(default=False)
-    imagen = models.ImageField(upload_to="imagenes/%Y/%m/%d")
+    imagen = models.ImageField()
     fecha = date.today().strftime("%d/%m/%Y")
 
     def __str__(self):
@@ -19,7 +19,7 @@ class ImagenesModel(models.Model):
         return self.nombre + "_"+ self.fecha
 
 
-class persona(models.Model):
+class persona(CMSPlugin):
     nombre = models.CharField(max_length=140)
     cedula = models.CharField(max_length=10)
     resenia = models.CharField(max_length=1400)

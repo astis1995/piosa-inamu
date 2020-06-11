@@ -1,0 +1,25 @@
+{% load static cms_tags sekizai_tags %}
+<html>
+<head>
+<title>Student_Show</title>
+</head>
+<body>
+<h1>The Students Here at Dataflair s {{num}}</h1>
+<img src="{% static "rb.png" %}" alt="rb.jpeg">
+<div>
+<ul>
+{% for img in imagenes %}
+<li>
+<h2>Hola</h2>
+
+<h2>Name {{ img.nombre }}</h2>
+<p> department {{ num}}</p>
+<p> class {{ img.cedula}}</p>
+<img src='../../media/{{img.imagen}}' alt="{{img.imagen}}">
+
+</li>
+{% endfor %}
+</ul>
+</div>
+</body>
+</html>
